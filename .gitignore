@@ -1,0 +1,13 @@
+node_modules/
+.idea/
+dist/
+.cache/
+build/
+.DS_Store
+coverage/
+lerna-debug.log
+.parcel-cache/
+sandbox/storybook-static/
+**/*.zip
+lib/isolated-hut/src/icons.config.json
+local-deploy-config.json

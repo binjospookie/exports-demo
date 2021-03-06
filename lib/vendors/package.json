@@ -1,0 +1,28 @@
+{
+  "name": "@some/vendors",
+  "version": "1.0.0",
+  "description": "Vendors feature",
+  "author": "v.pasynok",
+  "homepage": "",
+  "license": "ISC",
+  "files": ["/README.md", "/package.json", "/build"],
+  "scripts": {
+    "build": "rm -rf ./build && NODE_ENV=production ../../node_modules/.bin/rollup -c && npm run build:types",
+    "build:types": "../../node_modules/.bin/ttsc --project tsconfig.build.json"
+  },
+  "exports": {
+    "./contract": "./build/contract.js",
+    "./state": "./build/state.js",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "contract": ["build/contract.d.ts"],
+      "state": ["build/state.d.ts"]
+    }
+  },
+  "dependencies": {
+    "effector": "21.8.5",
+    "runtypes": "5.0.1"
+  }
+}

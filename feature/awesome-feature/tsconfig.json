@@ -1,0 +1,6 @@
+{
+  "extends": "../../default.config.ts.json",
+  "compilerOptions": {
+    "baseUrl": "./src/"
+  }
+}

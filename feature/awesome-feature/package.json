@@ -1,0 +1,21 @@
+{
+  "name": "@some/awesome-feature",
+  "version": "1.0.0",
+  "description": "awesome feature",
+  "author": "v.pasynok",
+  "homepage": "",
+  "license": "ISC",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": ["/README.md", "/package.json", "/build"],
+  "scripts": {
+    "build": "rm -rf ./build && NODE_ENV=production ../../node_modules/.bin/rollup -c && npm run build:types",
+    "build:types": "../../node_modules/.bin/ttsc --project tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@some/vendors": "1.0.0"
+  },
+  "peerDependencies": {
+    "@some/vendors": "1.0.0"
+  }
+}

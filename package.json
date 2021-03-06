@@ -1,0 +1,29 @@
+{
+  "name": "exports-demo",
+  "version": "1.0.0",
+  "description": "Exports usage demo",
+  "scripts": {
+    "bootstrap": "npm ci --silent && lerna bootstrap --hoist && npm run build",
+    "update:deps": "npm i --silent && lerna bootstrap --hoist",
+    "build": "lerna run build",
+    "clean": "lerna clean && rm -rf node_modules"
+  },
+  "private": true,
+  "files": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "17.1.0",
+    "@rollup/plugin-json": "4.1.0",
+    "@rollup/plugin-node-resolve": "11.2.0",
+    "@rollup/plugin-replace": "2.4.1",
+    "@rollup/plugin-typescript": "8.1.1",
+    "@rollup/plugin-url": "6.0.0",
+    "lerna": "3.22.1",
+    "prettier": "^2.2.1",
+    "rollup": "2.40.0",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "ttypescript": "1.5.12",
+    "typescript": "4.1.5",
+    "typescript-transform-paths": "1.1.15"
+  }
+}
